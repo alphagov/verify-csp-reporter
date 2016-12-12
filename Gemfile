@@ -1,13 +1,9 @@
 source "https://rubygems.org"
 
-gem "rack"
-gem "sinatra"
-gem "json"
+gem 'sinatra'
 
-
-group :test do
-	gem "rspec"
-	gem "rspec-core", '~> 3.5.4'
-	gem "rack-test"
-	gem "capybara"
+group :development, :test do
+  gem 'rspec'
+  gem 'capybara'
+  gem 'selenium-webdriver', '~>2.53.4'
 end
