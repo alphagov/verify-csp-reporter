@@ -1,0 +1,9 @@
+{
+  "csp-report": {
+    "document-uri": "https://example.co.uk",
+    "referrer": "",
+    "blocked-uri": "http://example.co.uk",
+    "violated-directive": "default-src https:",
+    "original-policy": "default-src https:; report-uri https://report.example.co.uk"
+  }
+}

@@ -11,12 +11,8 @@ class CspReporter < Sinatra::Base
 
 	post '/data' do
 		@data = JSON.parse(request.body.read)
-		puts @data
+    JSON.dump(@data)
   end
-
-	def greeting
-		'Hello World'
-	end
 
 	run! if app_file == $0
 end
