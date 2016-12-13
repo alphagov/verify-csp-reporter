@@ -11,7 +11,11 @@ class CspReporter < Sinatra::Base
 
 	post '/data' do
 		@data = JSON.parse(request.body.read)
-    JSON.dump(@data)
+		if @data['csp-report']
+      JSON.dump(@data)
+		else
+			status 400
+    end
   end
 
 	run! if app_file == $0
