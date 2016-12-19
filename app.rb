@@ -9,6 +9,10 @@ class CspReporter < Sinatra::Base
 		'Content Security Policy'
 	end
 
+  get '/test' do
+    status 200
+  end
+
 	post '/data' do
 		@data = JSON.parse(request.body.read)
 		if @data['csp-report']

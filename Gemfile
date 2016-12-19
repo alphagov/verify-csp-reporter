@@ -9,4 +9,5 @@ group :development, :test do
   gem 'activerecord'
   gem 'sinatra-activerecord'
   gem 'rake'
+  gem 'webmock'
 end

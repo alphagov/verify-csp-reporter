@@ -110,4 +110,5 @@ RSpec.configure do |config|
   # use Selenium as it is the most robust/mature browser driver
   # available.
   Capybara.javascript_driver = :selenium
+
 end
