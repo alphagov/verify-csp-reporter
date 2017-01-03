@@ -14,7 +14,13 @@ class CspReporter < Sinatra::Base
   end
 
 	post '/data' do
-		@data = JSON.parse(request.body.read)
+		begin
+			@data = JSON.parse(request.body.read)
+		rescue JSON::ParserError
+			status 400
+			return
+		end
+
 		if @data['csp-report']
       JSON.dump(@data)
 		else
